@@ -22,27 +22,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
     f.cifrado(mensaje);
-	for(int i = 0; i < f.permutacion.size();i++ )cout<< f.permutacion[i] << '\n';
-
-
-	//cout << f.bloques <<endl;
-	cout << f.c1 << endl;
-	cout << endl;
-	cout << f.c2 << endl;
-
-	for (int j = 0; j < f.c1.size(); j++ )
-	{
-		string g;
-		g = f.sI(f.c1[j]);
-		cout << g << endl;
-	}
-
-	for (int w = 0; w < f.c1.size(); w++ )
-	{
-		string g;
-		g = f.pI(f.c1[w]);
-		cout << g << endl;
-	}
+	//for(int i = 0; i < f.permutacion.size();i++ )cout<< f.permutacion[i] << '\n';
+		
     cout << "MENSAJE ORIGINAL: " << mensaje << endl;
 	
 

@@ -1,4 +1,4 @@
-﻿Compilación iniciada a las 01/09/2014 08:09:54 p.m..
+﻿Compilación iniciada a las 01/09/2014 10:07:11 p.m..
      1>Proyecto "C:\Users\TOshiba\documents\visual studio 2010\Projects\feistelD\feistelD\feistelD.vcxproj" en el nodo 2 (build destinos).
      1>InitializeBuildStatus:
          Se creará "Debug\feistelD.unsuccessfulbuild" porque se especificó "AlwaysCreate".
@@ -12,49 +12,48 @@
      1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(104): warning C4018: '<=' : no coinciden signed/unsigned
      1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(106): warning C4018: '<=' : no coinciden signed/unsigned
      1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(118): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(201): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(213): warning C4018: '>=' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(213): warning C4018: '>=' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(214): warning C4018: '<=' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(216): warning C4018: '<=' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(208): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(220): warning C4018: '>=' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(220): warning C4018: '>=' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(221): warning C4018: '<=' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(223): warning C4018: '<=' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(241): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(132): warning C4244: 'argumento' : conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(140) : vea la referencia a la creación de instancias de plantilla de función 'std::vector<_Ty> cadPermutacion<int>(int)' que se está compilando
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(134): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(129): warning C4101: 'num' : variable local sin referencia
      1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(5): warning C4018: '<' : no coinciden signed/unsigned
-                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(137) : vea la referencia a la creación de instancias de plantilla de función 'std::ostream &operator <<<std::string>(std::ostream &,const std::vector<_Ty> &)' que se está compilando
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(118): warning C4244: 'argumento' : conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(138) : vea la referencia a la creación de instancias de plantilla de función 'std::vector<_Ty> cadPermutacion<int>(int)' que se está compilando
+                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(147) : vea la referencia a la creación de instancias de plantilla de función 'std::ostream &operator <<<int>(std::ostream &,const std::vector<_Ty> &)' que se está compilando
                  with
                  [
                      _Ty=int
                  ]
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(120): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(115): warning C4101: 'num' : variable local sin referencia
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(105): warning C4018: '<' : no coinciden signed/unsigned
-                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(124) : vea la referencia a la creación de instancias de plantilla de función 'int buscarVec<bool>(std::vector<_Ty>,int)' que se está compilando
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(188): warning C4018: '<' : no coinciden signed/unsigned
+                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(244) : vea la referencia a la creación de instancias de plantilla de función 'int buscarPosicion<void>(std::vector<_Ty>,int)' que se está compilando
                  with
                  [
                      _Ty=int
                  ]
-                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(138) : vea la referencia a la creación de instancias de plantilla de función 'std::vector<_Ty> cadPermutacion<int>(int)' que se está compilando
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(119): warning C4018: '<' : no coinciden signed/unsigned
+                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(138) : vea la referencia a la creación de instancias de plantilla de función 'int buscarVec<bool>(std::vector<_Ty>,int)' que se está compilando
+                 with
+                 [
+                     _Ty=int
+                 ]
+                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feistel.cpp(140) : vea la referencia a la creación de instancias de plantilla de función 'std::vector<_Ty> cadPermutacion<int>(int)' que se está compilando
                  with
                  [
                      _Ty=int
                  ]
          Generando código...
+     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\misfunciones.h(195): warning C4715: 'buscarPosicion<void>' : no todas las rutas de acceso de control devuelven un valor
          Compilando...
          stdafx.cpp
          feistelD.cpp
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feisteld.cpp(25): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feisteld.cpp(33): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feisteld.cpp(40): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feisteld.cpp(9): warning C4018: '<' : no coinciden signed/unsigned
-                 c:\users\toshiba\documents\visual studio 2010\projects\feisteld\feisteld\feisteld.cpp(29) : vea la referencia a la creación de instancias de plantilla de función 'std::ostream &operator <<<std::string>(std::ostream &,const std::vector<_Ty> &)' que se está compilando
-                 with
-                 [
-                     _Ty=std::string
-                 ]
          Generando código...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\TOshiba\documents\visual studio 2010\Projects\feistelD\Debug\feistelD.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\feistelD.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\TOshiba\documents\visual studio 2010\Projects\feistelD\Debug\feistelD.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\TOshiba\documents\visual studio 2010\Projects\feistelD\Debug\feistelD.lib" /MACHINE:X86 Debug\feistel.obj
@@ -72,4 +71,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.20
+Tiempo transcurrido 00:00:02.13

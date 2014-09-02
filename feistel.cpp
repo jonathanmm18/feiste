@@ -118,13 +118,15 @@ vector <string>  feistel::ci_juntar(){
 	 for(int i =0; i < cI.size(); i++)
 	 {
 			temp[i] = this->sI(cI[i]);
-			cout << this->sI(cI[i]) << endl;
+			//cout << this->sI(cI[i]) << endl;
 			temp[i] = this->pI(temp[i]);
 	 
 	 }
 	 return temp;
 
 }
+
+
 
  string feistel::cifrado(string men){
 
@@ -134,13 +136,18 @@ vector <string>  feistel::ci_juntar(){
 		bloques = this->en_bloques(mensaje,numBloques);
 
         this->separar(bloques);
-		cout << bloques << endl;
+		//cout << bloques << endl;
 		permutacion = cadPermutacion<int>(numBloques-1);
 		string file("texto.tex");
 		guardar<int>(permutacion,file);
 
+		vector<int> inv;
+		inv = PermInversa();
+
+		cout << inv << endl;
+
 		
-		cout << c1 << endl;
+		//cout << c1 << endl;
 
 		 privateKey = 1;
 
@@ -148,12 +155,12 @@ vector <string>  feistel::ci_juntar(){
 
 
         c1 = this->cI_funcion(c1);
-		cout << c1 << endl;
+		//cout << c1 << endl;
 
         c2 = this->cI_funcion(c2);
         bloques = this->ci_juntar();
 
-		cout << bloques << endl;
+		//cout << bloques << endl;
 
         mensaje = vecToString<string>(bloques);
 
@@ -219,6 +226,28 @@ vector <string>  feistel::ci_juntar_I(){
 
         return s;
     }
+
+ vector<int> feistel::PermInversa()
+{
+	vector<int> temp,temp1 ;
+	vector<string> temp2;
+	int j=1;
+
+	string file("texto.tex"), DesPerm("desperm.tex");
+    temp2 = read<string>(file);
+	//cout << temp2 << endl;
+	temp = vecStringTovecInt<void>(temp2);
+
+	for(int i = 0; i < temp.size() ; i++)
+	{
+		//cout << buscarPosicion<void>(temp, i) << endl;
+		temp1.push_back(buscarPosicion<void>(temp, j));
+		j++;
+	}
+	guardar<int>(temp1,DesPerm);
+	
+	return temp1;
+}
 
 string feistel::descifrado(string men){
 

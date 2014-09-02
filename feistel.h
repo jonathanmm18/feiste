@@ -32,6 +32,8 @@ public:
     vector <string> cI_funcion(vector <string>);
     vector <string> cI_funcion_I(vector <string>);
 
+	vector <int> PermInversa();
+
 
     string sI(string);
     string sI_I(string);

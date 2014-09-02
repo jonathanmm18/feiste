@@ -48,6 +48,20 @@ Type mod(Type a, Type b)
       return  r = a - (q*b);
 };
 
+template < typename Type>
+vector<int> vecStringTovecInt(vector<string> lista)
+{
+	vector<int> num;
+
+    int num1;
+	for(unsigned int i=0; i < lista.size(); i++)
+    {
+        num1 = atoi(lista[i].c_str());
+		//cout << num1 <<endl;
+        num.push_back(num1);
+    }
+    return num;
+};
 template <typename Type>
 Type vecToString(vector<string> a)
 {
@@ -149,10 +163,10 @@ void guardar(vector<Type> fuente, string fileName)
 }
 
 template <typename Type>
-void read(vector<Type> fuente, string fileName )
+vector<Type> read(string fileName )
 {
 	ifstream readfile(fileName);
-    vector <string> lineas;
+    vector <Type> lineas;
     string d;
     if (readfile.is_open())
      {
@@ -164,6 +178,20 @@ void read(vector<Type> fuente, string fileName )
        readfile.close();
    }
     return lineas;
+}
+
+template <typename Type>
+int buscarPosicion(vector<int> lista, int num)
+{
+	int i,j;
+	j = 1;
+	for(i = 0;i < lista.size(); i++ ) 
+	{ 
+		//cout << num << " --> " << lista[i] << "  = " << i << endl;
+		if(lista[i] == num)return i;
+	}
+
+	
 }
 
 

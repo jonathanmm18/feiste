@@ -16,6 +16,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
+    <None Include="texto.tex">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="desperm.tex">
+      <Filter>Archivos de recursos</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
