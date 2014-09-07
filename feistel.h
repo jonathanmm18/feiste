@@ -16,7 +16,7 @@ private:
 
 public:
     vector <string> bloques,c1, c2 ;
-	vector <int> permutacion;
+	vector <int> permutacion, permutacionI;
     feistel();
 
     string cifrado(string);
@@ -36,8 +36,10 @@ public:
 
 
     string sI(string);
+	string sII(string);
     string sI_I(string);
     string pI(string);
+	string pII(string);
     void separar(vector <string>);
 
     vector <string>  ci_juntar();

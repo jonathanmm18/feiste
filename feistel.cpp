@@ -52,41 +52,47 @@ vector <string> feistel::en_bloques(string cadena, int n){
 string feistel::sI(string m){
         unsigned int j;
         string mn;
-        //cout << mod(-1,27) << endl;
 		int alf = unsigned(this->get_alfabeto().size());
         for(unsigned int i = 0; i < m.size(); i++)
         {
             j = this->get_alfabeto().find(m[i]);
-
-            //cout << "j: " << j << '\t';
-            //cout << this->get_alfabeto()[j] << '\t';
-
-
             j = mod<int>( ( mod<int>(j,alf)	+  mod<int>(privateKey,alf)), alf  );
-           // cout << "J: " << (j+ privateKey) << '\t';
             mn +=  this->get_alfabeto()[j];
-           // cout << this->get_alfabeto()[j] << '\n';
+        }
 
+        return mn;
+
+}
+string feistel::sII(string m){
+        unsigned int j;
+        string mn;
+		int alf = unsigned(this->get_alfabeto().size());
+        for(unsigned int i = 0; i < m.size(); i++)
+        {
+            j = this->get_alfabeto().find(m[i]);
+            j = mod<int>( ( mod<int>(j,alf)	-  mod<int>(privateKey,alf)), alf  );
+            mn +=  this->get_alfabeto()[j];
         }
 
         return mn;
 
 }
 string feistel::pI(string m){
-        //vector<int> position;
         string p;
         for(unsigned int i=0; i < permutacion.size(); i++)
         {
-			 //p+= m[permutacion[i]];
 			 p+= m.at(permutacion[i]);
         }
-        /*
-        p+= m[1];
-        p+= m[3];
-        p+= m[0];*/
-
         return p;
+}
 
+string feistel::pII(string m){
+        string p;
+        for(unsigned int i=0; i < permutacionI.size(); i++)
+        {
+			 p+= m.at(permutacionI[i]);
+        }
+        return p;
 }
 
 void feistel::separar(vector <string> m){
@@ -131,21 +137,21 @@ vector <string>  feistel::ci_juntar(){
  string feistel::cifrado(string men){
 
         mensaje = Stringen64<string>(men);
+
+		cout << Stringen64<string>(men) << endl;
+
 		int numBloques = mensaje.length()/16;
 
 		bloques = this->en_bloques(mensaje,numBloques);
 
         this->separar(bloques);
-		//cout << bloques << endl;
+		
+		cout << bloques << endl;
+		
 		permutacion = cadPermutacion<int>(numBloques-1);
-		string file("texto.tex");
+
+		string file("permutacion.feistel");
 		guardar<int>(permutacion,file);
-
-		vector<int> inv;
-		inv = PermInversa();
-
-		cout << inv << endl;
-
 		
 		//cout << c1 << endl;
 
@@ -177,41 +183,18 @@ vector <string>  feistel::ci_juntar(){
         return mensaje;
     }
 
-string feistel::sI_I(string m){
-        unsigned int j;
-        string mn;
-        //cout << this->get_alfabeto().find(m[0]) << endl;
+vector <string> feistel::cI_funcion_I(vector <string> cI){
+     
+	 vector <string> temp;
+	 temp = cI;
+	 for(int i =0; i < cI.size(); i++)
+	 {
+			temp[i] = this->sII(cI[i]);
+			//cout << "esto es sI_I: " << i << " : " << this->sI(cI[i]) << endl;
+			temp[i] = this->pII(temp[i]);	 
 
-        for(unsigned int i = 0; i < m.size(); i++)
-        {
-            j = this->get_alfabeto().find(m[i]);
-            //cout << "j: " << j << '\t';
-            //cout << this->get_alfabeto()[j] << '\t';
-
-            j = mod((j- privateKey), unsigned(this->get_alfabeto().size()));
-            mn +=  this->get_alfabeto()[j];
-
-           // cout << "J: " << (j+ privateKey) << '\t';
-           // cout << this->get_alfabeto()[j] << '\n';
-
-
-        }
-
-        return mn;
-
-}
-
-std::vector <std::string> feistel::cI_funcion_I(std::vector <std::string> cI){
-        std::vector <std::string> cCI;
-
-        cCI = cI;
-               for(int i = 0; i < cI.size(); i++)
-               {
-                   cCI[i] = this->sI_I(cI[i]);
-                   cCI[i] = this->pI(cCI[i]);
-               }
-
-        return cCI;
+	 }
+	 return temp;
 
 }
 
@@ -233,14 +216,13 @@ vector <string>  feistel::ci_juntar_I(){
 	vector<string> temp2;
 	int j=1;
 
-	string file("texto.tex"), DesPerm("desperm.tex");
+	string file("permutacion.feistel"), DesPerm("despermutacion.feistel");
     temp2 = read<string>(file);
 	//cout << temp2 << endl;
 	temp = vecStringTovecInt<void>(temp2);
 
 	for(int i = 0; i < temp.size() ; i++)
 	{
-		//cout << buscarPosicion<void>(temp, i) << endl;
 		temp1.push_back(buscarPosicion<void>(temp, j));
 		j++;
 	}
@@ -252,14 +234,29 @@ vector <string>  feistel::ci_juntar_I(){
 string feistel::descifrado(string men){
 
         string descrifrado;
-        bloques = this->en_bloques(men,4);
+
+		mensaje = Stringen64<string>(men);
+		//cout << "mensaje: \n" <<men;
+		int numBloques = mensaje.length()/16;
+		//cout << c1 << endl;
+
+		bloques = this->en_bloques(mensaje,numBloques);
+
+
         this->separar(bloques);
-        string perm("3102");
+       // string perm("3102");
+
+
+		permutacionI = PermInversa();
+		//cout << c1 << endl;
+
         privateKey = 1;
-        //scadPermutacion = perm;
+        //scadPermutacion = perm; 
 
+		c1 = this->cI_funcion_I(c1);
+		//cout << "\n c1: \n" << c1 << endl;
+      
 
-        c1 = this->cI_funcion_I(c1);
 
         c2 = this->cI_funcion_I(c2);
 

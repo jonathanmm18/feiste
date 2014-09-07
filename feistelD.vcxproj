@@ -75,9 +75,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="desperm.tex" />
+    <None Include="despermutacion.feistel" />
+    <None Include="permutacion.feistel" />
     <None Include="ReadMe.txt" />
-    <None Include="texto.tex" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="feistel.h" />

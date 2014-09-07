@@ -111,6 +111,7 @@ string Stringen64(string mensaje)
 
         mensaje += cad1;
     }
+	//cout << cad << endl;
     return mensaje;
 }
 template <typename Type>

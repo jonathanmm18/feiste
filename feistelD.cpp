@@ -17,22 +17,21 @@ ostream& operator << (ostream &o,const vector <Type> &v)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    string mensaje ="starwarslamisioncontinua@de@la@casaz",cifrado,descrifrado;
+    string mensaje ="starwars la mision continua de las casas starwars la mision continua de las casas",cifrado,descrifrado;
     feistel f;
 
 
     f.cifrado(mensaje);
-	//for(int i = 0; i < f.permutacion.size();i++ )cout<< f.permutacion[i] << '\n';
+	//for(int i = 0; i < f.permutacion.size();.i++ )cout<< f.permutacion[i] << '\n';
 		
-    cout << "MENSAJE ORIGINAL: " << mensaje << endl;
-	
+	cout << "MENSAJE ORIGINAL: " << mensaje << endl;
 
     cifrado = f.get_mensaje();
-    cout << "MENSAJE CIFRADO: " << cifrado << endl;
+	cout << "MENSAJE CIFRADO: " << cifrado << endl;
 
-	//descrifrado = f.descifrado(cifrado);
+	descrifrado = f.descifrado(cifrado);
 
-    //cout << "MENSAJE DESCIFRADO: " << descrifrado << endl;
+	cout << "MENSAJE DESCIFRADO: " << descrifrado << endl;
 	return 0;
 }
 

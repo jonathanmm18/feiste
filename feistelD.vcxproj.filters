@@ -16,10 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
-    <None Include="texto.tex">
+    <None Include="despermutacion.feistel">
       <Filter>Archivos de recursos</Filter>
     </None>
-    <None Include="desperm.tex">
+    <None Include="permutacion.feistel">
       <Filter>Archivos de recursos</Filter>
     </None>
   </ItemGroup>
